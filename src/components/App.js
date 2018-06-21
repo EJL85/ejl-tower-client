@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import GameList from './GameList';
 import PlayerList from './PlayerList';
+import BarChart from "./BarChart";
 
 class App extends React.Component {
 
@@ -45,6 +46,7 @@ class App extends React.Component {
                     </ul>
                 </div>
                 </main>
+                <BarChart/>
                 <Footer/>
             </div>
         )

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
-var createClass = require('create-react-class');
 
 const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -17,11 +16,9 @@ const data = {
     ]
 };
 
-export default createClass({
-    displayName: 'BarExample',
-
+class BarChart extends React.Component {
     render() {
-        return (
+        return(
             <div>
                 <h2>Bar Example (custom size)</h2>
                 <Bar
@@ -33,6 +30,8 @@ export default createClass({
                     }}
                 />
             </div>
-        );
+        )
     }
-});
+}
+
+export default BarChart;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
-import Bar from './Bar';
+import Bar from './BarChart';
 import NotFound from './NotFound';
 
 const Router = () => (
