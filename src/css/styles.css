@@ -1,3 +1,16 @@
+* {
+
+}
+
+body {
+    background: #212126;
+    color: #CFCBC2;
+}
+
 main {
     display: flex;
+}
+
+.hidden {
+    Display: none;
 }

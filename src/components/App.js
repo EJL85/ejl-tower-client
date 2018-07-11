@@ -4,6 +4,7 @@ import Footer from './Footer';
 import GameList from './GameList';
 import PlayerList from './PlayerList';
 import BarChart from "./BarChart";
+import AddGame from "./AddGame";
 
 class App extends React.Component {
 
@@ -22,31 +23,32 @@ class App extends React.Component {
             .then(players => this.setState({players: players.player}));
     };
 
-
-
     render() {
         return(
             <div>
                 <Header/>
                 <main>
-                <div>
-                    <ul>
-                        {Object.keys(this.state.games).map(key => <GameList
-                            key={key}
-                            games={this.state.games[key]}
-                        />)}
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        {Object.keys(this.state.players).map(key => <PlayerList
-                            key={key}
-                            players={this.state.players[key]}
-                        />)}
-                    </ul>
-                </div>
+                    <div>
+                        <ul>
+                            {Object.keys(this.state.games).map(key => <GameList
+                                key={key}
+                                games={this.state.games[key]}
+                            />)}
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            {Object.keys(this.state.players).map(key => <PlayerList
+                                key={key}
+                                players={this.state.players[key]}
+                            />)}
+                        </ul>
+                    </div>
                 </main>
-                <BarChart/>
+
+                <AddGame />
+
+                <BarChart gameLength={this.state.games.length} playerLength={this.state.players.length}/>
                 <Footer/>
             </div>
         )
